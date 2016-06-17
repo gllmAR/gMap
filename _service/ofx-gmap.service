@@ -1,0 +1,10 @@
+[Unit]
+Description= OFX GMAP service
+
+[Service]
+User=pi
+ExecStart=/home/pi/openFrameworks/apps/myApps/gMap/bin/gMap
+
+
+[Install]
+WantedBy=multi-user.target
