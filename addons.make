@@ -1,0 +1,5 @@
+ofxGLWarper
+ofxGui
+ofxOpenCv
+ofxOsc
+ofxXmlSettings
