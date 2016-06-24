@@ -42,10 +42,6 @@ void imageClass::loadXML(ofxXmlSettings XML, int preset){
     mediaPath = XML.getValue(xmlPath+"_"+"mediaPath", "img1.jpg");
     img.load(mediaPath);
     
-    
-
-
-
 
 }
 

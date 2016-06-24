@@ -2,7 +2,7 @@
 
 #include "ofMain.h"
 #include "ofxOsc.h"
-#include "imageClass.hpp"
+#include "gmapSurface.hpp"
 #include "ofxXmlSettings.h"
 
 
@@ -33,6 +33,7 @@ class ofApp : public ofBaseApp{
     
     void metaLoadPreset(int preset);
     void metaSavePreset(int preset);
+    void initSurfaces();
     
 
     int NUM_WARP = 10;
@@ -40,10 +41,13 @@ class ofApp : public ofBaseApp{
     
     ofxOscReceiver receiver;
     
-    vector<imageClass> warpers;
+    vector<gmapSurface> surface;
+
 
     
     ofxXmlSettings XML;
     string message;
+    
+
 
 };

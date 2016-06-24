@@ -14,6 +14,7 @@
 		250A95BA26587BE85DB0A353 /* ofxCvColorImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE9C7160245B19131DAE6128 /* ofxCvColorImage.cpp */; };
 		483908258D00B98B4BE69F07 /* ofxLabel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78D67A00EB899FAC09430597 /* ofxLabel.cpp */; };
 		4ADB88E2FB52E76A471065DE /* ofxOscParameterSync.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0AED834CE4DEC5260AF302A2 /* ofxOscParameterSync.cpp */; };
+		4DC3BBC11D1D9919006D07B2 /* gmapSurface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DC3BBBF1D1D9919006D07B2 /* gmapSurface.cpp */; };
 		4DF6ED251D13392200D5355E /* imageClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DF6ED231D13392200D5355E /* imageClass.cpp */; };
 		4E847D04587AE2FA1597E2F4 /* ofxGLWarper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF6209C5F82972D99DE8A1D2 /* ofxGLWarper.cpp */; };
 		510CAFE035E576A4E1502D52 /* UdpSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6DEF695B88BA5FAACEAA937 /* UdpSocket.cpp */; };
@@ -138,6 +139,8 @@
 		49EFFCF36CF194CCE0E1FAAB /* kdtree_index.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = kdtree_index.h; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/flann/kdtree_index.h; sourceTree = SOURCE_ROOT; };
 		4CD2228F2C8116D51179E3A3 /* devmem2d.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = devmem2d.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/core/devmem2d.hpp; sourceTree = SOURCE_ROOT; };
 		4CFA8A81B93736DE82F0090A /* gpumat.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = gpumat.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/core/gpumat.hpp; sourceTree = SOURCE_ROOT; };
+		4DC3BBBF1D1D9919006D07B2 /* gmapSurface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = gmapSurface.cpp; sourceTree = "<group>"; };
+		4DC3BBC01D1D9919006D07B2 /* gmapSurface.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = gmapSurface.hpp; sourceTree = "<group>"; };
 		4DF6ED231D13392200D5355E /* imageClass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imageClass.cpp; sourceTree = "<group>"; };
 		4DF6ED241D13392200D5355E /* imageClass.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = imageClass.hpp; sourceTree = "<group>"; };
 		4E95FB446A9C9C6F0DE12D75 /* OscPrintReceivedElements.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscPrintReceivedElements.h; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscPrintReceivedElements.h; sourceTree = SOURCE_ROOT; };
@@ -911,6 +914,8 @@
 			children = (
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
+				4DC3BBBF1D1D9919006D07B2 /* gmapSurface.cpp */,
+				4DC3BBC01D1D9919006D07B2 /* gmapSurface.hpp */,
 				4DF6ED231D13392200D5355E /* imageClass.cpp */,
 				4DF6ED241D13392200D5355E /* imageClass.hpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
@@ -1098,6 +1103,7 @@
 				63B57AC5BF4EF088491E0317 /* ofxXmlSettings.cpp in Sources */,
 				933A2227713C720CEFF80FD9 /* tinyxml.cpp in Sources */,
 				9D44DC88EF9E7991B4A09951 /* tinyxmlerror.cpp in Sources */,
+				4DC3BBC11D1D9919006D07B2 /* gmapSurface.cpp in Sources */,
 				5A4349E9754D6FA14C0F2A3A /* tinyxmlparser.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

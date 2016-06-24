@@ -9,9 +9,10 @@ void ofApp::setup(){
     receiver.setup(port);
     ofHideCursor();
     
+    
     for (int i =0; i<NUM_WARP; i++){
-        warpers.push_back(imageClass());
-        warpers.back().setup(i, "img1.jpg");
+        surface.push_back(gmapSurface());
+        surface.back().setup(i, "img1.jpg");
     }
     
     ofEnableBlendMode(OF_BLENDMODE_ADD);
@@ -25,14 +26,14 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
     
-        ofxOscMessage m;
+    ofxOscMessage m;
     
     for (int i =0; i<NUM_WARP; i++){
-        warpers[i].update(m);
+        surface[i].update(m);
     }
     
-
-
+   
+    
     
     while(receiver.hasWaitingMessages()){
         // get the next message
@@ -48,14 +49,14 @@ void ofApp::update(){
          else if (m.getAddress() == "/gmap/num_warp"){
              {NUM_WARP = m.getArgAsInt(0);}
              for (int i =0; i<NUM_WARP; i++){
-                 warpers.push_back(imageClass());
-                 warpers.back().setup(i, "img1.jpg");
+                 surface.push_back(gmapSurface());
+                 surface.back().setup(i, "img1.jpg");
              }
              
              ;}
         
         for (int i =0; i<NUM_WARP; i++){
-            warpers[i].update(m);
+            surface[i].update(m);
         }
     
         
@@ -66,8 +67,9 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     
+
     for (int i =0; i<NUM_WARP; i++){
-        warpers[i].draw();
+        surface[i].draw();
     }
     
     
@@ -81,12 +83,13 @@ void ofApp::metaLoadPreset(int preset){
     NUM_WARP = XML.getValue("NUM_WARP", 10);
     
     for (int i =0; i<NUM_WARP; i++){
-        warpers[i].loadXML(XML, preset);
+        surface[i].loadXML(XML, preset);
     }
     
     
     
 }
+//--------------------------------------------------------------
 
 void ofApp::metaSavePreset(int preset){
     
@@ -94,7 +97,7 @@ void ofApp::metaSavePreset(int preset){
     
     
     for (int i =0; i<NUM_WARP; i++){
-        warpers[i].saveXML(XML, preset);
+        surface[i].saveXML(XML, preset);
     }
     
     XML.setValue("NUM_WARP", NUM_WARP);
@@ -102,6 +105,12 @@ void ofApp::metaSavePreset(int preset){
     XML.saveFile("mySettings.xml");
 
     cout << "saved" << endl;
+    
+}
+//--------------------------------------------------------------
+
+void ofApp::initSurfaces(){
+
     
 }
 

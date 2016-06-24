@@ -62,5 +62,5 @@ sudo journalctl -f -u ofx-gmap
 * compile with appropriate flags depending on the system architectures
 * implement streaming to : https://weblog.lkiesow.de/20160215-raspberry-pi-screen-mirroring/
 * preset morphing
-* separate sources and geo
+* separate sources and surfaces
 * individual xml for config, sources and geo

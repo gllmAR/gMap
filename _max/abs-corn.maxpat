@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 2,
-			"revision" : 2,
+			"revision" : 3,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
@@ -43,9 +43,9 @@
 					"numinlets" : 7,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 170.0, 228.0, 262.0, 22.0 ],
+					"patching_rect" : [ 170.0, 228.0, 265.0, 22.0 ],
 					"style" : "",
-					"text" : "combine /warper/ #1 / #2 y \" \" data @triggers 6"
+					"text" : "combine /surface/ #1 / #2 y \" \" data @triggers 6"
 				}
 
 			}
@@ -69,9 +69,9 @@
 					"numinlets" : 7,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 57.0, 179.0, 263.0, 22.0 ],
+					"patching_rect" : [ 57.0, 179.0, 265.0, 22.0 ],
 					"style" : "",
-					"text" : "combine /warper/ #1 / #2  x \" \" data @triggers 6"
+					"text" : "combine /surface/ #1 / #2  x \" \" data @triggers 6"
 				}
 
 			}
