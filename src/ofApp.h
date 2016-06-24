@@ -3,10 +3,13 @@
 #include "ofMain.h"
 #include "ofxOsc.h"
 #include "imageClass.hpp"
+#include "ofxXmlSettings.h"
 
 
 
 #define port 9999
+
+
 
 
 class ofApp : public ofBaseApp{
@@ -28,16 +31,19 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
     
+    void metaLoadPreset(int preset);
+    void metaSavePreset(int preset);
+    
 
+    int NUM_WARP = 10;
 
     
     ofxOscReceiver receiver;
     
-    imageClass warp1;
-    imageClass warp2;
-    imageClass warp3;
-    imageClass warp4;
-    imageClass warp5;
-    imageClass warp6;
+    vector<imageClass> warpers;
+
+    
+    ofxXmlSettings XML;
+    string message;
 
 };

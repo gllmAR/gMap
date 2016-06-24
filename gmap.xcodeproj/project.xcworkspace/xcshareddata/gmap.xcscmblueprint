@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "BD21A46D5DA4876308A97009C0C7DE55DB1D0464",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "DC744C201458BB726B805B47CA1BBE00990C1814" : 0,
+    "BD21A46D5DA4876308A97009C0C7DE55DB1D0464" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "25BB0AC3-052B-40F3-9A16-C9C944CD85A4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "DC744C201458BB726B805B47CA1BBE00990C1814" : "..\/..\/addons\/ofxGLWarper",
+    "BD21A46D5DA4876308A97009C0C7DE55DB1D0464" : "gMap\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "gmap",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "gmap.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/gllmAR\/gMap.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BD21A46D5DA4876308A97009C0C7DE55DB1D0464"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/roymacdonald\/ofxGLWarper",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DC744C201458BB726B805B47CA1BBE00990C1814"
+    }
+  ]
+}

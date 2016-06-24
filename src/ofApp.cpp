@@ -4,20 +4,20 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-    //warper.activate();// this allows ofxGLWarper to automatically listen to the mouse and
+    
     ofBackground(0);
     receiver.setup(port);
     ofHideCursor();
     
-    warp1.setup(1, "img1.jpg");
-    warp2.setup(2, "img2.jpg");
-    warp3.setup(3, "img3.jpg");
-    warp4.setup(4, "img4.jpg");
-    warp5.setup(5, "img5.jpg");
-    warp6.setup(6, "img6.jpg");
-
+    for (int i =0; i<NUM_WARP; i++){
+        warpers.push_back(imageClass());
+        warpers.back().setup(i, "img1.jpg");
+    }
+    
     ofEnableBlendMode(OF_BLENDMODE_ADD);
-  
+    
+    metaLoadPreset(1);
+    
 
     
 }
@@ -25,18 +25,39 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
     
+        ofxOscMessage m;
+    
+    for (int i =0; i<NUM_WARP; i++){
+        warpers[i].update(m);
+    }
+    
+
+
+    
     while(receiver.hasWaitingMessages()){
         // get the next message
         ofxOscMessage m;
         receiver.getNextMessage(m);
-            warp1.update(1, m);
-            warp2.update(2, m);
-            warp3.update(3, m);
-            warp4.update(4, m);
-            warp5.update(5, m);
-            warp6.update(6, m);
+         if(m.getAddress() == "/gmap/save"){
+             metaSavePreset(1);
+             cout << "savvvve" << endl;
+             ;}
+         else if (m.getAddress() == "/gmap/load"){
+             metaLoadPreset(1)
+             ;}
+         else if (m.getAddress() == "/gmap/num_warp"){
+             {NUM_WARP = m.getArgAsInt(0);}
+             for (int i =0; i<NUM_WARP; i++){
+                 warpers.push_back(imageClass());
+                 warpers.back().setup(i, "img1.jpg");
+             }
+             
+             ;}
         
-       
+        for (int i =0; i<NUM_WARP; i++){
+            warpers[i].update(m);
+        }
+    
         
     }
 
@@ -44,15 +65,47 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-        warp1.draw();
-        warp2.draw();
-        warp3.draw();
-        warp4.draw();
-        warp5.draw();
-        warp6.draw();
+    
+    for (int i =0; i<NUM_WARP; i++){
+        warpers[i].draw();
+    }
     
     
 }
+
+//--------------------------------------------------------------
+void ofApp::metaLoadPreset(int preset){
+    
+    XML.loadFile("mySettings.xml");
+    
+    NUM_WARP = XML.getValue("NUM_WARP", 10);
+    
+    for (int i =0; i<NUM_WARP; i++){
+        warpers[i].loadXML(XML, preset);
+    }
+    
+    
+    
+}
+
+void ofApp::metaSavePreset(int preset){
+    
+    XML.loadFile("mySettings.xml");
+    
+    
+    for (int i =0; i<NUM_WARP; i++){
+        warpers[i].saveXML(XML, preset);
+    }
+    
+    XML.setValue("NUM_WARP", NUM_WARP);
+
+    XML.saveFile("mySettings.xml");
+
+    cout << "saved" << endl;
+    
+}
+
+
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){

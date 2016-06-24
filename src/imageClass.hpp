@@ -17,8 +17,11 @@
 class imageClass{
 public:
     void setup(int i, string path);
-    void update(int i, ofxOscMessage m);
+    void update(ofxOscMessage m);
     void draw();
+    
+    void loadXML(ofxXmlSettings XML, int preset);
+    void saveXML(ofxXmlSettings XML, int preset);
     
     int screenX;
     int screenY;
@@ -33,6 +36,11 @@ public:
     ofPoint wBLPosition;
     ofPoint wBRPosition;
     
+    string oscPath;
+    string xmlPath;
+    
+    int myIndex = 0;
+    
     ofParameter<float> alpha = 1;
     
     ofParameter<float> wTLx = 0;
@@ -43,6 +51,7 @@ public:
     ofParameter<float> wBLy = 1;
     ofParameter<float> wBRx = 1;
     ofParameter<float> wBRy = 1;
+    ofParameter<string> mediaPath;
     
     
     
